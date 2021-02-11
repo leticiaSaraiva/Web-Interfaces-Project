@@ -1,0 +1,12 @@
+.linha-do-tempo{
+    width: 700px;
+    /* Centralizando o componente LinhaDoTempo */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    /* Centralizando os posts dentro de LinhaDoTempo */
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 215, 227);
+}
+

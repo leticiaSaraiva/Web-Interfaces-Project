@@ -1,0 +1,56 @@
+.posts{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    background-color: bisque;
+    width: 350px;
+    height: 150px;
+    box-shadow: 5px 5px 4px rgba(12, 56, 35, 0.2);
+}
+
+.posts:hover{
+    box-shadow: 3px 3px 2px rgba(12, 56, 35, 0.6);
+    transform: translate(0, -2px);
+}
+
+.posts .post-nome{
+    font-size: 20px;
+    margin: 20px;
+}
+
+.posts .post-mensagem{
+    margin-left: auto;
+    padding: 0 2px;
+}
+
+.posts .div-likes .post-likes{
+    padding: 0px 20px;
+}
+
+.posts .div-likes{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 0;
+}
+
+.posts .div-likes .button-curtir{
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    border: 1px solid;
+    box-shadow: 2px 2px 3px rgba(12, 56, 35, 0.5);
+    background-color: rgb(216, 216, 216); 
+    padding: 2px;
+    margin: 0 3px;
+}
+
+.posts .div-likes .button-curtir:hover{
+    background-color: rgb(245, 231, 231); 
+}
+
+.posts .div-likes .button-curtir:active{
+    box-shadow: 1px 1px 2px rgba(12, 56, 35, 0.5);
+    transform: translate(1px, 1px);
+}

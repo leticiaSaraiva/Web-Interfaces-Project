@@ -1,0 +1,55 @@
+.navegador{
+    background-color: rgb(216, 50, 72);
+    width: 700px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.navegador .opcoes-nav{
+    display: flex;
+    /* O comando abaixo serve para a div com os botões ir para a parte direita da página */
+    margin-left: auto;
+}
+
+.navegador .opcoes-nav .link-linha-do-tempo{
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    margin-left: auto;
+    background-color: rgb(218, 112, 126)
+}
+
+.navegador .opcoes-nav .link-postar{
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    margin-left: auto;
+    
+}
+
+.navegador .opcoes-nav .usuario-logado-nav{
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+    margin-left: auto;
+    
+}
+
+/* CSS aplicado a logo
+* Mudei a largura da imagem (logo) e dei um padding para afastar um pouco da lateral
+*/
+.navegador .logo-nav{
+    width: 35px;
+    padding-left: 10px;
+    
+}
+
+.navegador .link-linha-do-tempo:hover{
+    background-color: rgb(218, 112, 126)
+}
+
+.navegador .link-postar:hover{
+    background-color: rgb(218, 112, 126)
+}
