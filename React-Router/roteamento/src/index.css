@@ -1,0 +1,60 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.content{
+  width: 700px;
+  margin: 0 auto; 
+  background-color: rgb(255, 215, 227);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.content .form-post{
+  background-color: #edecec;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 10px;
+  height: 200px;
+  width: 450px;
+  resize: none;
+}
+
+.content .div-botao-postar{
+  width: 470px;
+}
+
+.content .button-postar{
+  width: 40px;
+  margin-top: 20px;
+  padding: 5px;
+  border-radius: 3px;
+  cursor: pointer;
+  background-color: rgb(216, 216, 216); 
+  color: rgb(216, 50, 72);
+  border: 1px solid;
+  box-shadow: 2px 2px 3px rgba(12, 56, 35, 0.5); 
+}
+
+.content .button-postar:active{
+  box-shadow: 1px 1px 2px rgba(12, 56, 35, 0.5);
+  transform: translate(1px, 1px);
+}
