@@ -17,7 +17,7 @@ module.exports.inserirUsuario = function(req, res){
     promise.then(function(usuario){
         res.status(201).json(view.render(usuario));
     }).catch(function(error){
-        res.status(400).json({mensagem: "Erro na requisição!"});
+        res.status(401).json({mensagem: "Erro na requisição!"});
     });
 }
 
@@ -27,7 +27,7 @@ module.exports.listarUsuarios = function(req, res){
     promise.then(function(usuarios){
         res.status(200).json(view.renderMany(usuarios));
     }).catch(function(error){
-        res.status(500).json({mensagem: "Erro na requisição!"});
+        res.status(401).json({mensagem: "Erro na requisição!"});
     });
 }
 
@@ -38,7 +38,7 @@ module.exports.buscarUsuarioPorId = function(req, res){
     promise.then(function(usuario){
         res.status(200).json(view.render(usuario));
     }).catch(function(error){
-        res.status(404).json({mensagem: "Erro na requisição!"});
+        res.status(401).json({mensagem: "Erro na requisição!"});
     });
 
 }
@@ -70,6 +70,6 @@ module.exports.obterPosts = function(req, res){
     promise.then(function(posts){
         res.status(200).json(viewPosts.renderMany(posts));
     }).catch(function(error){
-        res.status(500).json({mensagem: "Erro na requisição!"});
+        res.status(401).json({mensagem: "Erro na requisição!"});
     });
 } 

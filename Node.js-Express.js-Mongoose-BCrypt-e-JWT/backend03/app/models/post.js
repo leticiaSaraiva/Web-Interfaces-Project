@@ -1,14 +1,15 @@
 const mongoose = require('mongoose');
+const Usuario = require('./usuario');
 
 module.exports = function(){
     var schema = mongoose.Schema({
         texto: {
-            type: String,
+            type: "String",
             required: true,
         },
         likes: {
-            type: Number,
-            required: true,
+            type: "Number",
+            required: false,
         },
         usuario: {
             type: mongoose.Schema.ObjectId,

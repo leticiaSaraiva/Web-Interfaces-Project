@@ -12,23 +12,29 @@ module.exports.inserirPost = function(req, res){
     let token = req.headers.token;
     let payload = jwt.decode(token);
     let id_usuario_logado = payload.id;
-    
-    let promise = Post.create({texto: texto_, likes: likes_, usuario: id_usuario_logado});
 
+    let post = {
+        texto: texto_,
+        likes: likes_,
+        usuario: id_usuario_logado
+    }
+    
+    let promise = Post.create(post);
+    
     promise.then(function(post){
         res.status(201).json(view.render(post));
     }).catch(function(error){
-        res.status(400).json({mensagem: "Erro na requisição!"});
+        res.status(401).json({mensagem: "Erro na requisição!"});
     });
 }
 
 module.exports.listarPosts = function(req, res){
-    let promise = Post.find().exec();
+    let promise = Post.find().populate("usuario").exec();
     
     promise.then(function(posts){
         res.status(200).json(view.renderMany(posts));
     }).catch(function(error){
-        res.status(500).json({mensagem: "Erro na requisição!"});
+        res.status(401).json({mensagem: "Erro na requisição!"});
     });
 }
 
@@ -39,7 +45,7 @@ module.exports.buscarPostPorId = function(req, res){
     promise.then(function(post){
         res.status(200).json(view.render(post));
     }).catch(function(error){
-        res.status(400).json({mensagem: "Erro na requisição!"});
+        res.status(401).json({mensagem: "Erro na requisição!"});
     });
 
 }
@@ -55,18 +61,18 @@ module.exports.deletarPost = function(req, res){
     promise.then(function(post){
         res.status(200).json(view.render(post));
     }).catch(function(error){
-        res.status(500).json({mensagem: "Erro na requisição!"});
+        res.status(401).json({mensagem: "Erro na requisição!"});
     });
 }
 
 module.exports.obterComentarios = function(req, res){
     let id = req.params.id;
 
-    let promise = Comentario.find({post:id}).exec();
+    let promise = Comentario.find({post:id}).populate("usuario").exec();
 
     promise.then(function(comentarios){
         res.status(200).json(viewComentarios.renderMany(comentarios));
     }).catch(function(error){
-        res.status(500).json({mensagem: "Erro na requisição!"});
+        res.status(401).json({mensagem: "Erro na requisição!"});
     });
 }

@@ -7,7 +7,7 @@ module.exports.login = function(req, res){
                 .then(function(usuario){
                     if(bcrypt.compareSync(req.body.senha, usuario.senha)){
                         let token = jwt.sign({id: usuario._id}, "senha");
-                        res.status(200).send({token: token});
+                        res.status(200).send({token: token, nome: usuario.nome});
                     }else{
                         res.status(401).send("E-mail ou senha errados. Por favor tente outra vez.");
                     }
