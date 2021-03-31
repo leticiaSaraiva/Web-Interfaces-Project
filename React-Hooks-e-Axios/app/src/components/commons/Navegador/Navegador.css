@@ -1,0 +1,42 @@
+.navegador{
+    background-color: rgb(216, 50, 72);
+    width: 700px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.navegador .opcoes-nav{
+    display: flex;
+    margin-left: auto;
+}
+
+.navegador .opcoes-nav .link{
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.navegador .opcoes-nav .link:hover{
+    background-color: rgb(218, 112, 126)
+}
+
+.navegador .opcoes-nav .link.active{
+    background-color: rgb(167, 80, 91)
+}
+
+.navegador .opcoes-nav .usuario-logado-nav{
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+    margin-left: auto;
+    
+}
+
+.navegador .logo-nav{
+    width: 35px;
+    padding-left: 10px;
+    
+}

@@ -1,0 +1,106 @@
+.postagens{
+    margin-bottom: 30px;
+}
+
+.posts{
+    display: flex;
+    flex-direction: column;
+    background-color: #fdcbba;
+    width: 350px;
+    height: 150px;
+    box-shadow: 5px 5px 4px rgba(12, 56, 35, 0.2);
+}
+
+.posts .post-nome{
+    font-size: 20px;
+    margin: 15px;
+}
+
+.posts .post-mensagem{
+    font-size: 18px;
+    margin-left: auto;
+    padding: 0 15px;
+}
+
+.posts .div-likes .post-likes{
+    padding: 0px 15px;
+}
+
+.posts .div-likes{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0;
+}
+
+.posts .div-likes .button-curtir{
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    border: 1px solid;
+    border-radius: 3px;
+    box-shadow: 2px 2px 3px rgba(12, 56, 35, 0.5);
+    background-color: rgb(235, 232, 232); 
+    color: rgb(216, 50, 72);
+    padding: 7px;
+    margin: 0 15px;
+}
+
+.posts .div-likes .button-curtir:hover{
+    background-color: rgb(250, 220, 220); 
+}
+
+.posts .div-likes .button-curtir:active{
+    box-shadow: 1px 1px 2px rgba(12, 56, 35, 0.5);
+    transform: translate(1px, 1px);
+}
+
+.comentarios{
+    width: 350px;
+    background-color: rgb(255, 240, 222);
+    box-shadow: 5px 5px 4px rgba(12, 56, 35, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+.comentarios .comentario-nome{
+    font-size: 15px;
+    padding: 10px 15px;
+}
+
+.comentarios .comentario-texto{
+    margin-left: 20px;
+    padding-bottom: 10px;
+}
+
+.comentarios .add-comentario{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+.comentarios .add-comentario textarea{
+    background-color: rgb(243, 232, 217);
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 5px;
+    width: 230px;
+    height: 45px;
+    resize: none;
+}
+
+.comentarios .add-comentario .button-comentar{
+    margin-left: 5px;
+}
+
+.comentarios .add-comentario .button-comentar:hover{
+    background-color: rgb(250, 220, 220); 
+}
+
+.comentarios .add-comentario .button-comentar:active{
+    box-shadow: 1px 1px 2px rgba(12, 56, 35, 0.5);
+    transform: translate(1px, 1px);
+}

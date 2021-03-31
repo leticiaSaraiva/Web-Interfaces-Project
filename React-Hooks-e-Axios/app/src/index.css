@@ -1,0 +1,67 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.content{
+  width: 700px;
+  margin: 0 auto; 
+  background-color: rgb(255, 215, 227);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 30px 0px 0px 0px;
+  /* height: auto; */
+  min-height: 92vh;
+}
+
+.content .form-post{
+  background-color: #edecec;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 10px;
+  height: 200px;
+  width: 450px;
+  resize: none;
+}
+
+.content form{
+  display: flex;
+  flex-direction: column;
+}
+
+.content form input{
+  background-color: #edecec;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 10px;
+  height: 15px;
+  width: 300px;
+}
+
+.content form button{
+  border-radius: 3px;  
+  border: 1px solid;
+  box-shadow: 2px 2px 3px rgba(12, 56, 35, 0.5);
+  background-color: rgb(235, 232, 232); 
+  color: rgb(216, 50, 72);
+  width: 70px;
+  height: 30px;
+  cursor: pointer;
+}
+
+button{
+  outline: none;
+}
